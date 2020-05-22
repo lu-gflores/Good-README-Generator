@@ -2,9 +2,13 @@
 function generateMarkdown(data) {
   return `
 # ${data.project}
+  ![inquirer](https://img.shields.io/bower/l/inquirer)
+
   ${data.license}
+
 ## Description 
     ${data.description}
+    
 ## Table of Contents
   *[Installation](#install)
   *[Usage](#usage)

@@ -1,6 +1,5 @@
 //
 var fs = require("fs");
-var path = require("path");
 var inquirer = require("inquirer");//inquirer package
 var generate = require("./utils/generateMarkdown.js")
 
@@ -52,7 +51,7 @@ const questions = [
          type: "input",
          message: "Command to run test?",
          name: "test"
-     }
+     },
     {
         type: "input",
         message: "Antyhing the user needs to know abou running this repo?",
@@ -61,13 +60,17 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-    return fs.writeFile(fileName.path(process.cwd(data)));
+    fs.writeFile(fileName, data, function(err) {
+        if (err) {
+            return console.log(err);
+        }
+    })
 }
 
 function init() {
     //launches questions prompt, then use feedback to pass to writetoFile function
     inquirer.prompt(questions).then(function(answers) {
-        writeToFile("README.md", JSON.stringify(answers))
+        writeToFile("README.md", generate(JSON.stringify(answers)));
     });
 }
 
