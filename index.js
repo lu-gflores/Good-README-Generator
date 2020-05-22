@@ -1,7 +1,6 @@
-//
 var fs = require("fs");
 var inquirer = require("inquirer");//inquirer package
-var generate = require("./utils/generateMarkdown.js")
+var generate = require("./utils/generateMarkdown.js") //
 
 //question prompts to user that generates the README
 const questions = [
@@ -40,7 +39,7 @@ const questions = [
         type: "list",
         message: "What license should this project have?",
         name: "license",
-        choices: ["GIT", "Apache 2.0", "GPL", "BSD"]
+        choices: ["GIT", "Apache 2.0", "MIT", "BSD"]
     },
     {
         type: "input",
@@ -50,11 +49,12 @@ const questions = [
      {
          type: "input",
          message: "Command to run test?",
-         name: "test"
+         name: "test",
+         default: "npm test"
      },
     {
         type: "input",
-        message: "Antyhing the user needs to know abou running this repo?",
+        message: "Anything the user needs to know abou running this repo?",
         name: "misc"
     }
 ];
@@ -70,7 +70,8 @@ function writeToFile(fileName, data) {
 function init() {
     //launches questions prompt, then use feedback to pass to writetoFile function
     inquirer.prompt(questions).then(function(answers) {
-        writeToFile("README.md", generate(JSON.stringify(answers)));
+    //passing to utils folder to prevent overwriting this Repo README.md
+        writeToFile("./utils/README.md", generate(answers));
     });
 }
 

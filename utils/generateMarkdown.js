@@ -2,18 +2,19 @@
 function generateMarkdown(data) {
   return `
 # ${data.project}
+
   ![inquirer](https://img.shields.io/bower/l/inquirer)
 
-  ${data.license}
 
 ## Description 
     ${data.description}
-    
+
 ## Table of Contents
-  *[Installation](#install)
-  *[Usage](#usage)
-  *[License](#license)
-  *[Contributors](#contributer)
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
   
 
 ## Installation
@@ -24,16 +25,17 @@ function generateMarkdown(data) {
   ${data.usage}
 
 ## License
-  ${data.license}
+  This project is licensed under the ${data.license} license
 
 ## Contributors
-  ${data.contributing}
+  ${data.contributer}
 
 ## Tests
   Run the following command: 
   ${data.test}
+
 ## Questions 
-Any questions or issues about this repo, contact at Github ${data.name} or via email ${data.email}.
+Any questions or issues about this repo, contact at Github ${data.username} or via email ${data.email}.
   `;
 }
 
