@@ -1,11 +1,11 @@
 
-# Repo
+# Seminar
 
   ![inquirer](https://img.shields.io/bower/l/inquirer)
 
 
 ## Description 
-    Testing
+    Testing Generator
 
 ## Table of Contents
 
@@ -20,18 +20,18 @@
   npm i
 
 ## Usage
-  follow installation
+  Follow instructions
 
 ## License
   This project is licensed under the MIT license
 
 ## Contributors
-  none
+  None
 
 ## Tests
   Run the following command: 
   npm test
 
 ## Questions 
-Any questions or issues about this repo, contact at Github gflores or via email test@.com.
+Any questions or issues about this repo, contact at Github Rookie or via email test@.com.
   

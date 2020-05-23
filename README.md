@@ -1,35 +1,37 @@
-
-# undefined
-  ![inquirer](https://img.shields.io/bower/l/inquirer)
-
-  undefined
-
+# README-Generator
+ 
 ## Description 
-    undefined
-    
-## Table of Contents
-  *[Installation](#install)
-  *[Usage](#usage)
-  *[License](#license)
-  *[Contributors](#contributer)
   
+As a developer, it is crucial to include an informative README about the project. This information includes a short description of what the application is for, how to use, install, and make contributions to project. Based on the quality of the README, it is more likely that other developers will use and contribute to the project. Creating a good README from scratch takes time, but the purpose of this project is to quickly generate a README through command-line and allow the developer(s) to focus more on completing their project rather than writing a good README.
 
 ## Installation
 
-  undefined
+Install this project by running the following command:
+  ```javascript
+npm i inquirer
+
+  ```
 
 ## Usage
-  undefined
+After running the installation command, run node.js in your terminal
 
-## License
-  undefined
+Next, run ```node index.js``` and answer the questions as follows which will pass the data to the README.
 
-## Contributors
-  undefined
 
-## Tests
-  Run the following command: 
-  undefined
-## Questions 
-Any questions or issues about this repo, contact at Github undefined or via email undefined.
+![Question in Terminal](./Assets/Images/questions.jpg)
+
+Once completed, a README.md is generated in the /utils folder
+
+![Readme generated](./Assets/Images/readme.jpg)
+
+
+The user's answers is then appended in the syntax of the README file.
+
+![Readme text](./Assets/Images/readmeSyntax.jpg)
+
+
+## Author
+
+[lu-gflores](https://github.com/lu-gflores)
+
   
